@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" version="3.1">
+  <display-name>estates</display-name>
+
+  <servlet>
+  	<servlet-name>poll</servlet-name>
+  	<servlet-class>estates.poll</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>poll</servlet-name>
+  	<url-pattern>/poll.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>join</servlet-name> <!-- 별명 -->
+  	<servlet-class>estates.join</servlet-class> <!-- java 파일을 연결하는 도구 -->
+  </servlet>
+  <servlet-mapping> <!-- java 파일을 가상의 웹페이지 주소로 변환 -->
+  	<servlet-name>join</servlet-name>
+  	<url-pattern>/join.do</url-pattern> <!-- 회원가입 post 전송 -->
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>loginok</servlet-name>
+  	<servlet-class>estates.loginok</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>loginok</servlet-name>
+  	<url-pattern>/loginok.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>logout</servlet-name>
+  	<servlet-class>estates.logout</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>logout</servlet-name>
+  	<url-pattern>/logout.do</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+  	<servlet-name>main</servlet-name>
+  	<servlet-class>estates.main</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>main</servlet-name>
+  	<url-pattern>/main.do</url-pattern>
+  </servlet-mapping>
+  
+    <servlet>
+  	<servlet-name>emailsearch</servlet-name>
+  	<servlet-class>estates.emailsearch</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>emailsearch</servlet-name>
+  	<url-pattern>/emailsearch.do</url-pattern>
+  </servlet-mapping>
+  
+  
+
+</web-app>
